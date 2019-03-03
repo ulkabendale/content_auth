@@ -8,12 +8,12 @@ use Drupal\node\Entity\Node;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
- * An example controller.
+ * A controller.
  */
 class ContentAuthController extends ControllerBase {
 
   /**
-   * Returns a render-able array for a test page.
+   * Returns a json array of a node.
    */
   public function content($apikey, $nid) {
     
@@ -38,12 +38,15 @@ class ContentAuthController extends ControllerBase {
                 'test' => $node->getContent,
                 ),
             );
+
             return new JsonResponse($json_array);
         } else {
+            // Access denied permission
             throw new AccessDeniedHttpException();
         }
     } else {
-        throw new AccessDeniedHttpException();
+            // Access denied permission
+            throw new AccessDeniedHttpException();
     }
   
   }
