@@ -1,0 +1,8 @@
+name: Content Authentication Control  
+type: module  
+description: This module helps access the content of the website on the basis of site key authentication.  
+core: 8.x  
+package: Custom
+dependencies:
+  - block
+  - node

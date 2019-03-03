@@ -1,0 +1,7 @@
+content_auth.settings:
+  type: mapping
+  label: 'Content Auth Module settings'
+  mapping:
+    siteapikey:
+      type: string
+      label: 'Site API Key'

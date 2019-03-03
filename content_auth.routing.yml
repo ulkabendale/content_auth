@@ -1,0 +1,7 @@
+content_auth.content:
+  path: '/page_json/{apikey}/{nid}' 
+  defaults: 
+    _controller: '\Drupal\content_auth\Controller\ContentAuthController::content' 
+    _title: 'Page Json'
+  requirements: 
+    _permission: 'access content' 
