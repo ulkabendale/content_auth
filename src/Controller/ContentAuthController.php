@@ -35,7 +35,6 @@ class ContentAuthController extends ControllerBase {
                 'attributes' => array(
                 'title' =>  $node->get('title')->value,
                 'content' => $node->get('body')->value,
-                'test' => $node->getContent,
                 ),
             );
 
